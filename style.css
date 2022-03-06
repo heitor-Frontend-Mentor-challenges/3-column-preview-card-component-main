@@ -1,0 +1,154 @@
+/* ----------------- */
+/* Custom Properties */
+/* ----------------- */
+:root {
+  --clr-orange: hsl(31, 77%, 52%);
+  --clr-cyan-500: hsl(184, 100%, 22%);
+  --clr-cyan-900: hsl(179, 100%, 13%);
+  --clr-white: hsl(0, 0%, 100%, 0.75);
+  --clr-grey: hsl(0, 0%, 95%);
+
+  --ff-lexend: "Lexend Deca", sans-serif;
+  --ff-big: "Big Shoulders Display", cursive;
+}
+
+/* ----------------- */
+/* Reset             */
+/* ----------------- */
+
+*,
+*::before,
+::after {
+  box-sizing: border-box;
+}
+
+body,
+h2,
+p {
+  margin: 0;
+}
+
+body {
+  font-family: var(--ff-lexend);
+  font-size: 0.938rem;
+  color: var(--clr-white);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font: inherit;
+}
+
+/* ----------------- */
+/* Utility Classes   */
+/* ----------------- */
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 55rem) {
+  .flex {
+    flex-direction: row;
+  }
+}
+
+.container {
+  padding-inline: 2em;
+  margin: 2rem auto;
+  max-width: 70rem;
+}
+
+.bg-orange {
+  background-color: var(--clr-orange);
+}
+
+.bg-cyan {
+  background-color: var(--clr-cyan-500);
+}
+
+.bg-dark {
+  background-color: var(--clr-cyan-900);
+}
+
+.text-orange {
+  color: var(--clr-orange);
+}
+
+.text-cyan {
+  color: var(--clr-cyan-500);
+}
+
+.text-dark {
+  color: var(--clr-cyan-900);
+}
+
+.text-grey {
+  color: var(--clr-grey);
+}
+
+.ff-lexend {
+  font-family: var(--ff-lexend);
+}
+
+.ff-big {
+  font-family: var(--ff-big);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* ----------------- */
+/* Components        */
+/* ----------------- */
+
+.btn {
+  padding: 0.75em 1.5em;
+  width: 9rem;
+  border-radius: 100px;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--clr-grey);
+  border: 1px solid transparent;
+}
+
+.btn:hover {
+  color: white;
+  background-color: transparent;
+  border: 1px solid var(--clr-grey);
+}
+
+.card {
+  flex-direction: column;
+  padding: 4rem;
+  gap: 2.5rem;
+  max-width: 25rem;
+}
+
+.card img {
+  width: 5rem;
+}
+
+.card h2 {
+  font-size: 2rem;
+}
+
+.card p:not([class]) {
+  max-width: 50ch;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
