@@ -9,7 +9,7 @@
   --clr-grey: hsl(0, 0%, 95%);
 
   --ff-lexend: "Lexend Deca", sans-serif;
-  --ff-big: "Big Shoulders Display", cursive;
+  --ff-big: "Big Shoulders Display", sans-serif;
 }
 
 /* ----------------- */
@@ -29,10 +29,15 @@ p {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-family: var(--ff-lexend);
   font-size: 0.938rem;
   color: var(--clr-white);
   line-height: 1.5;
+  min-height: 100vh;
 }
 
 img {
@@ -62,8 +67,8 @@ button {
 
 .container {
   padding-inline: 2em;
-  margin: 2rem auto;
   max-width: 70rem;
+  margin-block: 2.5rem;
 }
 
 .bg-orange {
@@ -118,6 +123,7 @@ button {
   text-decoration: none;
   background-color: var(--clr-grey);
   border: 1px solid transparent;
+  transition: background-color 250ms ease-in-out;
 }
 
 .btn:hover {
@@ -143,6 +149,24 @@ button {
 
 .card p:not([class]) {
   max-width: 50ch;
+}
+
+.card-first {
+  border-radius: 1rem 1rem 0 0;
+}
+
+.card-last {
+  border-radius: 0 0 1rem 1rem;
+}
+
+@media (min-width: 55rem) {
+  .card-first {
+    border-radius: 1rem 0 0 1rem;
+  }
+
+  .card-last {
+    border-radius: 0 1rem 1rem 0;
+  }
 }
 
 .attribution {
